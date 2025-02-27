@@ -32,6 +32,12 @@ export class User extends Model {
   @HasMany(() => Todo)
   todo: Todo;
 
+  @Column({
+    defaultValue: 0,
+    allowNull: false
+  })
+  todos!: number;
+
   @BeforeUpdate
   @BeforeCreate
   static hashPassword(user: User) {
@@ -39,13 +45,4 @@ export class User extends Model {
       user.password = bcrypt.hashSync(user.password, 10);
     }
   }
-}
-
-
-export enum Action {
-  Manage = 'manage',
-  Create = 'create',
-  Read = 'read',
-  Update = 'update',
-  Delete = 'delete',
 }
