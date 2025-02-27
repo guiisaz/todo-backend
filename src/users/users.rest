@@ -1,0 +1,16 @@
+POST http://localhost:3000/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name: "guilherme",
+  "email": "guilherme@souza.com",
+  "password": "password"
+}
+
+###
+
+GET http://localhost:3000/users/me
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJndWlsaGVybWVAc291emEuY29tIiwiaWF0IjoxNzM4MDAzNTkyLCJleHAiOjE3MzgwODk5OTJ9.yWVQJzuCLLKTwIytq8Z472g9VhbtXU66NaxbQ5cP84k
